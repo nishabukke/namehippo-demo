@@ -24,7 +24,7 @@
                 </div>
                 <div class="right-upper-header">
                     <div class="search-favt">
-                        <span class="fas fa-search"></span>
+                        <span class="fas fa-search" id="searchIcon"></span>
                         <span class="far fa-heart"></span>
                     </div>
                 </div>
@@ -55,6 +55,16 @@
             </div>
         </div>
     </header>
+
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+          <div class="popup-content-inner">
+            <h5>Search</h5>
+            <button class="close-btn" id="closePopup">&times;</button>
+          </div>
+          <input type="search" placeholder="Search for something...">
+        </div>
+    </div>
 
     <main class="site-content">
         <section class="sold-domain-section section_lg container">
@@ -369,6 +379,24 @@
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="script.js"></script>
+
+    <script>
+        // Get elements
+    const searchIcon = document.getElementById("searchIcon");
+    const popup = document.getElementById("popup");
+    const closePopup = document.getElementById("closePopup");
+
+    // Show popup
+    searchIcon.addEventListener("click", () => {
+      popup.style.display = "flex";
+    });
+
+    // Close popup
+    closePopup.addEventListener("click", () => {
+      popup.style.display = "none";
+    });
+    </script>
+
 
     <script>
         // // sticky header
