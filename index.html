@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="style.css">
     <title>Namehippo</title>
 </head>
@@ -70,26 +72,40 @@
         <section class="sold-domain-section section_lg container">
             <h2 class="common-heading">Sold Domains</h2>
             <div class="sold-domain-inner">
-                <div class="sold-domain-item">
-                    <img src="images/sold-domain1.jpg" alt="">
-                    <span class="sold-btn">sold</span>
-                </div>
-                <div class="sold-domain-item">
-                    <img src="images/sold-domain2.jpg" alt="">
-                    <span class="sold-btn">sold</span>
-                </div>
-                <div class="sold-domain-item">
-                    <img src="images/sold-domain3.jpg" alt="">
-                    <span class="sold-btn">sold</span>
-                </div>
-                <div class="sold-domain-item">
-                    <img src="images/sold-domain4.jpg" alt="">
-                    <span class="sold-btn">sold</span>
-                </div>
-                <div class="sold-domain-item">
-                    <img src="images/sold-domain5.jpg" alt="">
-                    <span class="sold-btn">sold</span>
-                </div>
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <div class="sold-domain-item">
+                            <img src="images/sold-domain1.jpg" alt="">
+                            <span class="sold-btn">sold</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="sold-domain-item">
+                            <img src="images/sold-domain2.jpg" alt="">
+                            <span class="sold-btn">sold</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="sold-domain-item">
+                            <img src="images/sold-domain3.jpg" alt="">
+                            <span class="sold-btn">sold</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="sold-domain-item">
+                            <img src="images/sold-domain4.jpg" alt="">
+                            <span class="sold-btn">sold</span>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="sold-domain-item">
+                            <img src="images/sold-domain5.jpg" alt="">
+                            <span class="sold-btn">sold</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
             </div>
         </section>
 
@@ -155,7 +171,7 @@
         </section>
 
         <section class="premium-domain-section section_lg">
-            <div class="separator"></div>
+            <!-- <div class="separator"></div> -->
             <div class="container">
                 <h2 class="common-heading">Premium Domain Names</h2>
 
@@ -231,7 +247,7 @@
         </section>
 
         <section class="why-choose-us-section section_lg">
-            <div class="separator"></div>
+            <!-- <div class="separator"></div> -->
             <div class="container">
                 <h2 class="common-heading">Why Choose Namehippo</h2>
 
@@ -378,7 +394,40 @@
 
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
+
+     <!-- Initialize Swiper -->
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+        disableOnInteraction: false,
+      },
+      breakpoints: {
+        "@0.00": {
+          slidesPerView: 1,
+          spaceBetween: 10,
+        },
+        "@0.75": {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        "@1.00": {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        "@1.50": {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      },
+    });
+  </script>
 
     <script>
         // Get elements
@@ -405,15 +454,15 @@ $(window).on("scroll touchmove", function() {
 
 if ($(document).scrollTop() > $("#sticky-wrapper").position().top) {
   $('.sticky-area').css('width', '100%');
-  $('.sticky-area').css('padding', '10px 120px');
+  $('.sticky-area').css('padding', '10px 70px');
   $('.sticky-area').css('max-width', '1600px');
   $('.sticky-area').css('margin', '0 auto');
   $('.sticky-area').css('position', 'fixed');
   $('.sticky-area').css('top', '0px');
   $('.sticky-area').css('left', '0px');
   $('.sticky-area').css('background', 'linear-gradient(to left, #8e54e9, #4776e6)');
-  $('.sticky-area').css('z-index', '999');
-  $('.sticky-area').css('box-shadow', '0 3px 16px -2px #ebe8e8');
+  $('.sticky-area').css('z-index', '9999');
+  $('.sticky-area').css('box-shadow', '0 3px 15px -2px #ebe8e8');
   $('#sticky-wrapper').addClass('is-sticky');
 
 }
