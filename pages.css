@@ -109,7 +109,7 @@ p{
 
 /* domain section css start */
 
-.domain-section .container{
+.domain-section .domain-inner{
     display: flex;
     justify-content: space-between;
     flex-direction: row-reverse;
@@ -117,12 +117,19 @@ p{
     position: relative;
 }
 
+.domain-page-section .domain-inner{
+    display: grid;
+    grid-template-columns: 6.5fr 5.5fr;
+    gap: 30px;
+    
+}
+
 .left-domain-part{
     position: sticky;
     top: 122px;
     z-index: 1;
     background: #fff;
-    padding: 40px 25px;
+    padding: 30px 25px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -131,8 +138,42 @@ p{
     /* margin-bottom: 20px; */
 }
 
+.left-domain-part.domain-page{
+    position: relative;
+    top: 0;
+}
+
+.left-domain-part.domain-page .domain-name{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.left-domain-part.domain-page .domain-name h4{
+    /* font-size: 20px; */
+    margin-bottom: 0;
+}
+
+.left-domain-part.domain-page .domain-name .verify-text{
+    display: flex;
+    gap: 5px;
+    padding: 3px 10px;
+    border-radius: 50px;
+    background: rgba(0, 182, 122, .08);
+    align-items: center;
+}
+
+.left-domain-part.domain-page .domain-name img{
+    width: 30px;
+    height: 30px;
+}
+
 .left-domain-section{
     width: 470px;
+}
+
+.domain-page-section .left-domain-section, .domain-page-section .right-domain-section{
+    width: 100%;
 }
 
 .domain-name p{
@@ -145,13 +186,17 @@ p{
     align-items: center;
     background-color: #f6f7fa;
     border: 1px solid #4776e6;
-    padding: 10px 20px;
+    padding: 10px 15px;
     border-radius: 10px;
+}
+
+.buy-now-heading{
+    display: flex;
+    gap: 5px;
 }
 
 .buy-now input[type='radio']{
     color: #4776e6;
-    margin-right: 10px;
 }
 
 .checkout-btn .gradient-button{
@@ -165,20 +210,10 @@ p{
     margin-left: 10px;
 }
 
-.bullet-points-domain{
-    margin-top: 30px;
-}
-
 .bullet-points-domain li{
     padding: 5px 0px;
     list-style-type: none;
     color: #003;
-}
-
-.payments-div{
-    display: flex;
-    gap: 10px;
-    margin-top: 30px;
 }
 
 .payments-div img{
@@ -194,7 +229,7 @@ p{
 .right-domain-section{
     display: flex;
     flex-direction: column;
-    gap: 45px;
+    gap: 50px;
     width: 850px;
 }
 
@@ -230,6 +265,14 @@ p{
 .domain-desc{
     position: relative;
     z-index: 1;
+}
+
+.domain-desc.domain-page h1{
+    font-size: 36px;
+}
+
+.domain-desc.domain-page h1 span{
+    font-size: 18px;
 }
 
 .domain-points-heading{
@@ -283,6 +326,10 @@ p{
     padding: 20px;
   }
 
+  .domain-page-section .flip-card-front, .domain-page-section .flip-card-back{
+    padding: 10px; 
+  }
+
   .flip-card-front img{
     width: 100px;
   }
@@ -300,10 +347,14 @@ p{
     width: 30px;
 }
 
+.domain-key-points P{
+    font-size: 17px;
+}
+
 .domain-key-points li{
     padding: 5px 0px;
     list-style-type: none;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 .domain-key-points.keyword a{
@@ -322,30 +373,38 @@ p{
     margin: 0px auto;
 }
 
+.domain-points.faq .accordion-body{
+    padding: 20px;
+}
+
 .domain-points.faq .accordion-item{
     margin-bottom: 15px;
-    border: 1px solid #c7c7c7;
-    border-radius: 0%;
+    border-radius: 10px;
 }
 
 .domain-points.faq .accordion-button{
     color: #2e3d62;
+    border: 1px solid #f6f7fa;
+    border-radius: 10px;
     font-weight: 600;
-    font-size: 20px;
-    padding: 30px;
+    font-size: 22px;
+    padding: 35px;
+    gap: 25px;
+    align-items: center;
 }
 
+.domain-points.faq .accordion-button:hover, .domain-points.faq .accordion-button:not(.collapsed){
+    background-color: #f6f7fa;
+    border-color: #4776e6;
+}
+
+
 .domain-points.faq .accordion-button:focus{
-    border-color: transparent;
     box-shadow: none;
 }
 
-.domain-points.faq .accordion-button:not(.collapsed){
-    background-color: transparent;
-}
-
 .domain-points.faq .accordion-body p{
-    font-size: 16px;
+    font-size: 17px;
 }
 
 .domain-points.faq .accordion-body ul{
@@ -356,7 +415,28 @@ p{
     list-style-type: disc;
 }
 
-.domain-inner{
+.domain-points.faq .accordion-button::after{
+    width: 25px;
+    height: 25px;
+    margin-left: auto;
+    content: "+";
+    display: flex;
+        align-items: center;
+        font-size: 26px;
+        background: #4776e6;
+        color: #fff;
+        justify-content: center;
+        border-radius: 50%;
+        padding: 15px;
+}
+
+.domain-points.faq .accordion-button:not(.collapsed)::after {
+    background-image: none;
+    transform: none;
+    content: '-';
+}
+
+.premium-domain-inner{
     margin-top: 20px;
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -412,6 +492,85 @@ p{
 
 
 /* domain section css end */
+
+/* help section css start */
+
+.help-section{
+    background-color: #fff;
+    box-shadow: 0 15px 30px 0 rgba(68, 86, 103, .2);
+    border: 1px solid #f6f7fa;
+    border-radius: 10px;
+}
+
+.help-section-heading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.help-section-heading hr{
+    width: 15%;
+}
+
+.help-section-inner{
+    margin-top: 30px;
+    padding: 0px 80px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 30px;
+    align-items: center;
+}
+
+.help-section-item-cont{
+    position: relative;
+}
+
+.help-section-item{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(12, 12, 13, .1), 0 1px 4px rgba(12, 12, 13, .05);
+    position: relative;
+    z-index: 2;
+    background-color: #fff;
+}
+
+.help-section-item-cont .replies{
+    position: absolute;
+    left: 0;
+    bottom: -27px;
+    right: 0;
+    text-align: center;
+    background: linear-gradient(89.52deg, #3a4991 .42%, #7088ff 114.33%);
+    color: #fff;
+    border-radius: 0 0 10px 10px;
+    line-height: 28px;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 1;
+    padding-top: 14px;
+}
+
+.help-section-item-cont .replies b{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #82dba8;
+    display: inline-block;
+    position: relative;
+    top: 1px;
+    margin-right: 10px;
+}
+
+.help-section-item i{
+    font-size: 22px;
+}
+
+/* help section css end */
 
 
 /* search section css start */
@@ -544,8 +703,12 @@ p{
 
 .social-icons a{
     background: #fff;
-    padding: 8px 6px;
+    display: flex
+;
+    padding: 10px;
     border-radius: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .social-icons a:hover{
