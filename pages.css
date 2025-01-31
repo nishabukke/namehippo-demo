@@ -265,6 +265,7 @@ p{
 .domain-desc{
     position: relative;
     z-index: 1;
+    margin-bottom: 30px;
 }
 
 .domain-desc.domain-page h1{
