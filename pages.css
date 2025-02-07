@@ -523,6 +523,12 @@ p{
     align-items: center;
 }
 
+.domain-page-section .help-section-inner{
+    display: flex;
+    flex-direction: column-reverse;
+
+}
+
 .help-section-item-cont{
     position: relative;
 }
