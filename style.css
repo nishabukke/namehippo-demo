@@ -114,8 +114,82 @@ p{
 
 .lower-header .navigation a{
     color: #fff;
-    margin: 0px 20px;
-    font-size: 17px;
+}
+
+.tj-menu-area ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    position: relative;
+} 
+
+.tj-menu-area li {
+    position: relative;
+}
+
+.tj-menu-area .nav-link > a {
+    color: #fff;
+    margin: 0px 15px;
+}
+
+.tj-menu-area  li:hover a{
+    color: #fff;
+    text-decoration: underline;
+}
+
+.tj-menu-area .nav-link:hover > a::after {
+    display: block;
+}
+
+.tj-menu-area .has-dropdown:hover .sub-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.tj-menu-area li .sub-menu li a:hover {
+    color: #2e3d62;
+}
+
+.tj-menu-area li .sub-menu {
+    text-align: left;
+    margin: 0;
+    list-style: none;
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    left: 0%;
+    top: 140%;
+    transition: 0.4s;
+    background: #fff;
+    padding: 10px;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 0 rgba(68, 86, 103, .2);
+}
+
+.tj-menu-area li .sub-menu li {
+    display: block;
+    margin-right: 0;
+    transition: 0.4s;
+    padding: 10px 0px;
+    border-bottom: 1px solid #c7c7c7;
+}
+
+.tj-menu-area li .sub-menu li:last-child{
+    border-bottom: unset;
+}
+
+.tj-menu-area li .sub-menu li a{
+    color: #2e3d62;
+    text-decoration: none;
+}
+
+.tj-menu-area li .sub-menu li a:hover{
+    text-decoration: underline;
 }
 
 .home-banner-overlay{
@@ -536,8 +610,6 @@ p{
 
 /* why choose us section css end */
 
-
-
 /* how it works section css start */
 
 .how-it-works-section{
@@ -581,6 +653,74 @@ p{
 }
 
 /* how it works section css end */
+
+
+/* blog section css start */
+
+.blog-inner{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 25px;
+}
+
+.blog-item{
+    border-radius: 10px;
+    box-shadow: 0 15px 30px 0 rgba(68, 86, 103, .2);
+}
+
+/* #item1 .blog-info{
+    background-image: url('images/blog-card-bg.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-bottom-right-radius: 10px;
+} */
+
+.blog-item img{
+    width: 100%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid #c7c7c7;
+    height: 220px;
+}
+
+.blog-info{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.blog-date p{
+    font-size: 14px;
+}
+
+.blog-info .content-p{
+    background-color: #c7c7c7;
+    padding: 5px 15px;
+    border-radius: 50px;
+    width: max-content;
+}
+
+.blog-info a:hover{
+    text-decoration: underline;
+    color: #23126a;
+}
+
+.blog-date{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #5d5c64;
+}
+
+.blog-date p span{
+    margin-right: 5px;
+}
+
+/* blog section css end */
+
 
 /* search section css start */
 
@@ -703,18 +843,18 @@ p{
     color: #4f038f;
 }
 
-.social-icons{
+.footer-item .social-icons{
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px;
 }
 
-.social-icons span{
+.footer-item .social-icons span{
     font-size: 24px;
     color: #23126a;
 }
 
-.social-icons a{
+.footer-item .social-icons a{
     background: #fff;
     display: flex;
     padding: 10px;
@@ -723,7 +863,7 @@ p{
     align-items: center;
 }
 
-.social-icons a:hover{
+.footer-item .social-icons a:hover{
     background: #c7c7c7;
 }
 

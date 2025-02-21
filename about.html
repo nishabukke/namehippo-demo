@@ -10,9 +10,26 @@
     <title>Namehippo</title>
 </head>
 <body>
-    <header id="header" class="custom-sticky domain-header">
+    <header id="header">
         <div class="header-inner container">
-            <div class="lower-header">
+            <div class="upper-header">
+                <div class="left-upper-header">
+                    <div class="social-icons">
+                        <a href="https://www.instagram.com/namehippo_domain/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+                        <a href="https://www.facebook.com/namehippo" target="_blank"><span class="fa-brands fa-facebook"></span></a>
+                        <a href="https://www.linkedin.com/company/namehippo/" target="_blank"><span class="fa-brands fa-linkedin"></span></a>
+                        <a href="https://x.com/name_hippo" target="_blank"><span class="fa-brands fa-twitter"></span></a>
+                    </div>
+                </div>
+                <div class="right-upper-header">
+                    <div class="search-favt">
+                        <span class="fas fa-search" id="searchIcon"></span>
+                        <a href="favorite.html"><span class="far fa-heart"></span></a>
+                        <a href="login.html"><span class="far fa-user"></span></a>
+                    </div>
+                </div>
+            </div>
+            <div class="lower-header sticky-area" id="sticky-wrapper">
                 <div class="logo">
                     <a href="index.html"><img src="images/logo.png" alt=""></a>
                 </div>
@@ -64,7 +81,7 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li>   
+                            </li>  
                           <li class="nav-link">
                               <a href="blogs.html">Blogs</a>
                           </li> 
@@ -73,252 +90,89 @@
                 </div>
             </div>
         </div>
+        <div class="home-banner-content container">
+            <h1 class="m-0 text-white text-center">About Us</h1>
+        </div>
     </header>
 
-    <main class="site-content">
-        
-        <section class="domain-section section_lg">
-            <div class="container domain-inner">
-                <div class="left-domain-section">
-                    <div class="left-domain-part">
-                        <div class="domain-name">
-                            <h4>Purchase Domain</h4>
-                            <p class="m-0">Once you purchase this domain, our team will send you detailed instructions on how to transfer the domain to your ownership.</p>
-                        </div>
-                        <div class="buy-now">
-                            <span class="fw-semibold buy-now-heading"><input type="radio" name="" id="" checked> Buy Now</span>
-                            <span><img src="images/escrow-logo.svg" alt=""></span>
-                            <span>$1200</span>
-                        </div>
-                        <div class="checkout-btn">
-                                <a href="" class="gradient-button">Click to Checkout 
-                                <span class="fas fa-arrow-right"></span></a>
-                        </div>
-                        <div class="bullet-points-domain">
-                            <li><span class="fas fa-check"></span> Expert curated premium domain name</li>
-                            <li><span class="fas fa-check"></span> Professionally crafted logo design</li>
-                            <li><span class="fas fa-check"></span> Guaranteed transfer or your money back</li>
-                        </div>
-                        <div class="payments-div">
-                            <img src="images/payment-img.png" alt="">
-                        </div>
+    <div class="popup-overlay" id="popup">
+        <div class="popup-content">
+          <div class="popup-content-inner">
+            <h5>Search</h5>
+            <button class="close-btn" id="closePopup">&times;</button>
+          </div>
+          <input type="search" placeholder="Search for something...">
+        </div>
+    </div>
+
+    <main class="site-content">    
+        <section class="about-section section_lg container">
+            <div class="about-inner">
+                <div class="left-about">
+                    <h2 class="common-heading text-start">We Sell Premium domain name <br>
+                        for your next big thing</h2>
+                    <p class="m-0">
+                        We at NameHippo, understand that doing research and finding great domain name for business or startup is a very tedious, patience driven and complex process. Due to a large market size, most of the domain names are already registered. So even after spending ample time for the searching the possibility and availability of domain name isn’t available.
+                    </p>
+                    <p>
+                        Hush. Take a deep breath!! Don’t worry, we will take care of your domain name needs at NameHippo! We have a collection of quality handpicked unique business names tailored only for your business/startup! Escalate your growth story by incorporating these powerful brand name. At NameHippo, you can easily find and buy creative business names. Simply put some keywords related to your business in the search box and you will get a word treat for sure! We provide you with ready-to-use logo domain name so that your time is saved to a great extent. We only sell curated quality domain names for new businesses and brands.
+                    </p>
+                </div>
+                <div class="right-about">
+                    <img src="images/about-img.png" alt="">
+                </div>
+            </div>
+
+            <div class="how-to-choose-section">
+                <h4>How to choose a Brandable domain name for your business or startup?</h4>
+                <div class="how-to-choose-inner">
+                    <div class="how-to-choose-item">
+                        <h5 class="m-0">1. Remember your customer:</h5>
+                        <p class="m-0">Choose a name that reflects your niche and resonates with customers. Think like a customer to find the best fit, and check social media availability.</p>
+                    </div>
+                    <div class="how-to-choose-item">
+                        <h5 class="m-0">2. Credibility:</h5>
+                        <p class="m-0">People look for honesty and professionalism, even if the name is very original and unique.</p>
+                    </div>
+                    <div class="how-to-choose-item">
+                        <h5 class="m-0">3. Easy to recall:</h5>
+                        <p class="m-0">They are simple to understand and retain.</p>
+                    </div>
+                    <div class="how-to-choose-item">
+                        <h5 class="m-0">4. Relevant and distinct:</h5>
+                        <p class="m-0">Even if the name is not precise, it should be unique and relatable.</p>
+                    </div>
+                    <div class="how-to-choose-item">
+                        <h5 class="m-0">5. Keep it short:</h5>
+                        <p class="m-0">Basically they should be small for the sake of memorability.</p>
                     </div>
                 </div>
-                <div class="right-domain-section">
-                    <div class="domain-img">
-                        <img src="images/domain-product1.jpg" alt="">
-                        <i class="far fa-heart" id="heart" onclick="fillHeart()"></i>
-                    </div>
-                    <div class="domain-desc">
-                        <h2 class="fw-semibold">Waazy.com</h2>
-                        <p class="m-0">This domain name is for sale</p>
-                    </div>
-                    <div class="domain-points cards">
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                              <div class="flip-card-front">
-                                <img src="images/icon1.png" alt="Avatar">
-                                <h5 class="m-0">Transparent Pricing</h5>
-                              </div>
-                              <div class="flip-card-back">
-                                <p class="m-0">Clear and upfront pricing so that you can purchase the domains with confidence.</p>
-                              </div>
-                            </div>
-                          </div>
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                              <div class="flip-card-front">
-                                <img src="images/icon2.png" alt="Avatar">
-                                <h5 class="m-0">Same Day Transfers</h5>
-                              </div>
-                              <div class="flip-card-back">
-                                <p class="m-0">We initiate most domain transfers within same business day of the purchase.</p>
-                              </div>
-                            </div>
-                          </div>
-                        <div class="flip-card">
-                            <div class="flip-card-inner">
-                              <div class="flip-card-front">
-                                <img src="images/icon3.png" alt="Avatar">
-                                <h5 class="m-0">Guaranteed Delivery</h5>
-                              </div>
-                              <div class="flip-card-back">
-                                <p class="m-0">100% Purchase Protection Guarantee. Receive full refund if we are unable to trans fer the domain for any reason.</p>
-                              </div>
-                            </div>
-                          </div>
-                    </div>
-                    <div class="domain-points">
-                        <div class="domain-points-heading">
-                            <h4 class="m-0">About Waazy.com</h4>
-                        </div>
-                        <div class="domain-desc">
-                            <o class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus sequi consectetur modi quo accusantium velit dicta ad ratione deleniti inventore non suscipit iusto ab voluptas corporis, aut illum recusandae minus.</o>
-                        </div>
-                    </div>
-                    <div class="domain-points">
-                        <div class="domain-points-heading">
-                            <h4 class="m-0">Possible Uses</h4>
-                        </div>
-                        <div class="domain-desc">
-                            <p class="m-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio dolores doloribus mollitia?</p>
-                        </div>
-                    </div>
-                    <div class="domain-points">
-                        <div class="domain-points-heading">
-                            <h4 class="m-0">Keywords</h4>
-                        </div>
-                        <div class="domain-key-points keyword">
-                            <a href="index.html">Art</a>
-                            <a href="index.html">Color</a>
-                            <a href="index.html">Creative</a>
-                            <a href="index.html">Design</a>
-                            <a href="index.html">Fashion</a>
-                            <a href="index.html">Indigo</a>
-                            <a href="index.html">Modern</a>
-                            <a href="index.html">Stripe</a>
-                            <a href="index.html">Style</a>
-                            <a href="index.html">Trendy</a>
-                        </div>
-                    </div>
-                    <div class="domain-points">
-                        <div class="domain-points-heading">
-                            <h4 class="m-0">Why Namehippo?</h4>
-                        </div>
-                        <div class="domain-key-points">
-                            <li><p class="fw-semibold m-0">A Premium Domain Name</p>
-                                Every business name on Namehippo is curated by our experts.
-                            </li>
-                            <li><p class="fw-semibold m-0">Professionally Designed Logo</p>
-                                A creative logo created by a highly skilled logo designer.
-                            </li>
-                            <li><p class="fw-semibold m-0">Transparent Pricing</p>
-                                No hidden fees, no escrow fees. Guaranteed delivery.
-                            </li>
-                        </div>
-                    </div> 
-                    <div class="domain-points">
-                        <div class="domain-points-heading">
-                            <h4 class="m-0">What's Next?</h4>
-                        </div>
-                        <div class="domain-key-points">
-                            <li><p class="fw-semibold m-0">Checkout Securely</p>
-                                We accept all major credit cards, Bitcoin or wire transfers.
-                            </li>
-                            <li><p class="fw-semibold m-0">Follow Transfer Instructions</p>
-                                An agent will contact you with personalized information.
-                            </li>
-                            <li><p class="fw-semibold m-0">Confirm Delivery</p>
-                                Payment is held in escrow until you've received the name.
-                            </li>
-                        </div>
-                    </div> 
-                    <div class="domain-points">
-                        <div class="domain-points-heading">
-                            <h4 class="m-0">Customers Also Loved</h4>
-                        </div>
-                        <div class="premium-domain-inner">
-                            <div class="premium-domain-item">
-                                <img src="images/premium-domain-img.jpg" alt="">
-                                <div class="domain-content">
-                                    <h4 class="m-0">waazy.com</h4>
-                                    <img src="images/domain-product1.jpg" alt="">
-                                    <div class="price">
-                                        <span>$1200</span>
-                                        <a href="domain-detail.html" class="gradient-button">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="premium-domain-item">
-                                <img src="images/premium-domain-img.jpg" alt="">
-                                <div class="domain-content">
-                                    <h4 class="m-0">inkfinite.com</h4>
-                                    <img src="images/domain-product2.jpg" alt="">
-                                    <div class="price">
-                                        <span>$1200</span>
-                                        <a href="" class="gradient-button">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="premium-domain-item">
-                                <img src="images/premium-domain-img.jpg" alt="">
-                                <div class="domain-content">
-                                    <h4 class="m-0">equitra.com</h4>
-                                    <img src="images/domain-product3.jpg" alt="">
-                                    <div class="price">
-                                        <span>$1200</span>
-                                        <a href="" class="gradient-button">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="premium-domain-item">
-                                <img src="images/premium-domain-img.jpg" alt="">
-                                <div class="domain-content">
-                                    <h4 class="m-0">infostatus.com</h4>
-                                    <img src="images/domain-product4.jpg" alt="">
-                                    <div class="price">
-                                        <span>$1200</span>
-                                        <a href="" class="gradient-button">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="premium-domain-item">
-                                <img src="images/premium-domain-img.jpg" alt="">
-                                <div class="domain-content">
-                                    <h4 class="m-0">bizero.com</h4>
-                                    <img src="images/domain-product5.jpg" alt="">
-                                    <div class="price">
-                                        <span>$1200</span>
-                                        <a href="" class="gradient-button">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="premium-domain-item">
-                                <img src="images/premium-domain-img.jpg" alt="">
-                                <div class="domain-content">
-                                    <h4 class="m-0">scorilla.com</h4>
-                                    <img src="images/domain-product6.jpg" alt="">
-                                    <div class="price">
-                                        <span>$1200</span>
-                                        <a href="" class="gradient-button">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>   
+            </div>
         </section>
 
-        <section class="help-section section_lg container">
-          <div class="help-section-heading">
-            <hr>
-            <p class="text-center m-0">Need help? Contact us now</p>
-            <hr>
-          </div>
-          <div class="help-section-inner">
-            <div class="help-section-item-cont">
-              <div class="help-section-item">
-                <i class="far fa-message"></i>
-                <a href="#"><p class="m-0">Ready to Chat?</p></a>
-              </div>
-                <div class="replies">
-                  <b></b><span>Online - </span>Replies in 3 Min
+        <section class="why-choose-us-section section_lg">
+            <!-- <div class="separator"></div> -->
+            <div class="container">
+                <h2 class="common-heading">Why Choose Namehippo</h2>
+
+                <div class="why-choose-inner">
+                    <div class="why-choose-item">
+                        <img src="images/why-icon1.png" alt="">
+                        <h4 class="m-0">Buyer Protection Program</h4>
+                        <p class="m-0">We protect every transaction through a careful escrow process by DAN, leading to 100% successful acquisitions.</p>
+                    </div>
+                    <div class="why-choose-item">
+                        <img src="images/why-icon2.png" alt="">
+                        <h4 class="m-0">Safe Payments by DAN</h4>
+                        <p class="m-0">We have partnered with DAN to processes all payments with professional-grade security so you never have to worry!</p>
+                    </div>
+                    <div class="why-choose-item">
+                        <img src="images/why-icon3.png" alt="">
+                        <h4 class="m-0">Best Customer Support</h4>
+                        <p class="m-0">Customers love our support. We are always available for you and respond as soon as possible.</p>
+                    </div>
                 </div>
             </div>
-            <div class="help-section-item-cont">
-              <div class="help-section-item">
-                <i class="fas fa-phone"></i>
-                <a href="#"><p class="m-0">+123 456 7890</p></a>
-              </div>
-            </div>
-            <div class="help-section-item-cont">
-              <div class="help-section-item">
-                <i class="far fa-envelope-open"></i>
-                <a href="#"><p class="m-0">someone@example.com</p></a>
-              </div>
-            </div>
-          </div>
         </section>
 
         <section class="faq-section section_lg container">
@@ -593,12 +447,12 @@
                 <div class="footer-item">
                     <h3 class="m-0">Quick Links</h3>
                     <ul>
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="about.html">About</a></li>
-                      <li><a href="all-names.html">All Names</a></li>
-                      <li><a href="blogs.html">Blogs</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                  </ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="all-names.html">All Names</a></li>
+                        <li><a href="blogs.html">Blogs</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
                 </div>
                 <div class="footer-item">
                     <h3 class="m-0">By Industry</h3>
@@ -620,11 +474,11 @@
                         <li><a href="www.namehippo.com" target="_blank">www.namehippo.com</a></li>
                     </ul>
                     <div class="social-icons">
-                      <a href="https://www.instagram.com/namehippo_domain/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
-                      <a href="https://www.facebook.com/namehippo" target="_blank"><span class="fa-brands fa-facebook"></span></a>
-                      <a href="https://www.linkedin.com/company/namehippo/" target="_blank"><span class="fa-brands fa-linkedin"></span></a>
-                      <a href="https://x.com/name_hippo" target="_blank"><span class="fa-brands fa-twitter"></span></a>
-                  </div>
+                        <a href="https://www.instagram.com/namehippo_domain/" target="_blank"><span class="fa-brands fa-instagram"></span></a>
+                        <a href="https://www.facebook.com/namehippo" target="_blank"><span class="fa-brands fa-facebook"></span></a>
+                        <a href="https://www.linkedin.com/company/namehippo/" target="_blank"><span class="fa-brands fa-linkedin"></span></a>
+                        <a href="https://x.com/name_hippo" target="_blank"><span class="fa-brands fa-twitter"></span></a>
+                    </div>
                 </div>
             </div>
             <!-- <div class="lower-footer container">
