@@ -80,7 +80,7 @@ p{
     background-size: 100% 100%;
     position: relative;
     z-index: 1;
-    background-color: #fff;
+    /* background-color: #fff; */
     height: 550px;
 }
 
@@ -91,7 +91,7 @@ p{
     background-size: 100% 100%;
     position: relative;
     z-index: 1;
-    background-color: #fff;
+    /* background-color: #fff; */
     height: 400px !important;
 }
 
@@ -1431,3 +1431,303 @@ display: block;
 }
 
 /* login and registers page css end */
+
+
+/********** MOBILE HEADER ************/
+
+
+.mobile-header{
+    display: none;
+}
+
+.mobile-menu-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to left, #8e54e9, #4776e6);
+    padding: 10px;
+}
+
+.mobile-menu-container .logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.mobile-menu-container .logo p{
+    line-height: 1;
+    display: none;
+}
+
+/* mobile menu css */
+
+.canva_expander {
+    cursor: pointer;
+    display: block;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+}
+
+.canva_expander span {
+    height: 2px;
+    width: 35px;
+    display: block;
+    background: #fff;
+    cursor: pointer;
+    list-style: none;
+    margin: 8px 0;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    margin-left: auto;
+}
+
+.canva_expander span.dot2 {
+    width: 27px;
+}
+
+.canva_expander span.dot4 {
+    width: 22px;
+}
+
+
+.hamburger {
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    /* line-height: 20px; */
+    padding: 5px;
+    /* border-radius: 5px; */
+    color: #fff;
+    border: 0;
+    font-size: 30px;
+    font-weight: bold;
+    outline: none;
+    z-index: 1111;
+    background: none;
+}
+
+.cross{
+  background:none;
+  position:absolute;
+  top:5px;
+  right:15px;
+  padding:7px 15px 0px 15px;
+  color:#2e3d62;
+  border:0;
+  font-size:3em;
+  line-height:65px;
+  font-weight:bold;
+  cursor:pointer;
+  outline:none;
+  z-index:22222;
+}
+.menu{z-index:1111; font-weight:bold; font-size:14px; width:100%; background-color: #fff;  position:absolute; text-align:center; top: 0; left: 0;min-height: 100%;}
+.menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none; padding-top: 80px;}
+.menu li {display: block;   padding:20px 0 20px 0;}
+.menu li:hover{display: block;    background-color: #fff;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#2e3d62;font-size: 14px;}
+.menu ul li a:hover {  color: #2e3d62; text-decoration:none;}
+.menu a{text-decoration:none; color:#2e3d62;}
+
+.nav__sub li{
+    padding: 10px 0px !important;
+}
+
+.fa-chevron-right{
+    font-size: 12px;
+}
+
+.glyphicon-home{
+  color: #2e3d62; 
+  font-size:1.5em; 
+  margin-top:5px; 
+  margin:0 auto;
+}
+
+
+.nav__item , .nav__item {
+	margin-top: 10px;
+}
+
+.menu ul .nav__link {
+	font-weight: 600;
+	color: #2e3d62;
+    /* font-family: 'myregularfont'; */
+	text-decoration: none;
+}
+
+.menu ul .nav__sub {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 100%;
+    height: 100vh;
+	background-color: #fff;
+  color: #2e3d62;
+	opacity: 0;
+	display: none;
+	transition: all 0.35s ease-in-out;
+	transform: translateX(100%);
+}
+
+.menu ul .nav__sub.is-active {
+  opacity: 1;
+  display: block;
+  transform: translateX(0%);
+}
+
+.menu ul .nav__sub {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding: 15px;
+	list-style-type: none;
+}
+
+.contact-btn-mobile{
+    border-radius: 50px;
+    display: flex;
+    margin: 0 auto;
+    width: max-content;
+    border: 1px solid #2e3d62;
+    padding: 10px 20px !important;
+    margin-top: 10px;
+}
+
+.hamburger, .cross, .menu{
+  display: none;
+}
+
+
+@media screen and (max-width:450px) {
+    .mobile-header{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    .header-inner, .home-banner-image, .left-how-it-works, .bd.border_bg-3, .bd.border_bg-1 , .bd.border_bg-2, .right-content{
+        display: none;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .common-heading {
+        font-size: 30px;
+    }
+    
+    #header{
+        height: 243px;
+        background-size: cover;
+    }
+
+    .section_lg{
+        padding: 50px 30px;
+    }
+
+    .mobile-header .logo img{
+        width: 150px;
+    }
+
+    .home-banner-content, .footer-inner, .about-inner, .how-to-choose-inner, .why-choose-inner, .right-all-names, .by-industry-section, .right-by-industry-inner, .blog-inner, .contact-section{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+    .about-section{
+        padding-top: 0;
+    }
+
+    .why-choose-item {
+        padding: 20px;
+    }
+
+    .why-choose-item img{
+        width: 70px;
+    }
+
+    .blog-header{
+        height: 245px !important;
+        background-size: cover !important;
+    }
+
+    .blog-header .home-banner-content, .home-banner-content {
+        padding: 80px 20px;
+        gap: 10px;
+    }
+
+    .home-banner-content p {
+        font-size: 14px;
+    }
+
+    .domain-points.faq .accordion-button {
+        color: #2e3d62;
+        border: 1px solid #f6f7fa;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 20px;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .domain-points.faq .accordion {
+        width: 100%;
+    }
+
+    .right-about{
+        display: none;
+    }
+
+    .footer-inner{
+        gap: 30px;
+    }
+
+    .footer-item li{
+        font-size: 14px;
+    }
+
+    .home-banner-content h1 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+    
+    .home-banner-heading{
+        gap: 15px;
+    }
+
+    .sort-by select {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .blog-info p, .blog-date p {
+        font-size: 14px;
+    }
+
+    .blog-info {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .blog-section1{
+        display: none;
+    }
+
+    .left-contact{
+        gap: 15px;
+    }
+
+    .contact-form .input-group input, .contact-form .input-group textarea {
+        padding: 5px;
+    }
+
+    .input-group label{
+        font-size: 14px;
+    }
+}
