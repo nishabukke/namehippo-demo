@@ -6,8 +6,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/css/intlTelInput.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/intlTelInput.min.js"></script>
     <link rel="stylesheet" href="pages.css">
-    <title>Namehippo</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <title>Register | Namehippo</title>
 </head>
 <body>
     <header id="header" class="domain-header">
@@ -163,28 +166,22 @@
             <div class="register-heading">
                 <h2 class="common-heading m-0 text-white">Custom Registration</h2>
             </div>
-            <form action="" method="POST">
-                    <div class="input-group">
-                        <input type="name" name="fname" placeholder="First Name" required>
-                        <input type="name" name="lname" placeholder="Last Name" required>
-                    </div>
-                    <div class="input-group">
-                        <input type="email" name="email" placeholder="Email" required>
-                        <input type="tel" name="phone" placeholder="Phone no." required>
-                    </div>
-                    <div class="input-group">
-                        <input type="password" name="password" placeholder="Password" required>
-                        <input type="password" name="confirm-password" placeholder="Confirm Passwword" required>
-                    </div>
-                    <textarea name="address" id="" placeholder="Address"></textarea>
-                    <div class="input-group">
-                        <input type="text" name="city" id="" placeholder="City">
-                        <input type="text" name="state" id="" placeholder="State">
-                    </div>
-                    <div class="input-group">
-                        <input type="text" name="country" id="" placeholder="Country">
-                        <input type="number" name="pincode" id="" placeholder="Zip Code">
-                    </div>
+            <form action="" method="POST" id="registrationForm">
+                <div class="input-group">
+                    <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                    <span class="error" id="fnameError"></span>
+            
+                    <input type="text" name="lname" id="lname" placeholder="Last Name" required>
+                    <span class="error" id="lnameError"></span>
+                </div>
+            
+                <div class="input-group">
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <span class="error" id="emailError"></span>
+            
+                    <input type="tel" name="phone" id="phone" placeholder="Phone no." required>
+                    <span class="error" id="phoneError"></span>
+                </div>
                     <button type="submit" class="gradient-button">Register</button>
             </form>
             <a href="login.html">Already a Member? Click to Login</a>
@@ -224,7 +221,7 @@
                 <div class="footer-item">
                     <h3 class="m-0">Get In Touch</h3>
                     <ul>
-                        <li><a href="#">NameHippo, Kapil Upwan Plaza, Bibvewadi, Pune - 37 (INDIA)</a></li>
+                        <li><a href="https://maps.app.goo.gl/LAwtVntzP5vW8VVx9" target="_blank">NameHippo, Office No.: 201, Mahaveer Corner, VIIT, college rd, opp. Swami Vivekananda Garden, Kondhwa, Pune, Maharashtra 411048</a></li>
                         <li><a href="tel:9561444700">+91-9561-444-700</a></li>
                         <li><a href="www.namehippo.com" target="_blank">www.namehippo.com</a></li>
                     </ul>
@@ -246,5 +243,65 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="script.js"></script>
 
+    <script>
+        document.getElementById("registrationForm").onsubmit = function (event) {
+    let isValid = true;
+
+    // First Name Validation
+    let fname = document.getElementById("fname").value;
+    if (fname.trim() === "") {
+        document.getElementById("fnameError").innerText = "First name is required.";
+        document.getElementById("fnameError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("fnameError").style.display = "none";
+    }
+
+    // Last Name Validation
+    let lname = document.getElementById("lname").value;
+    if (lname.trim() === "") {
+        document.getElementById("lnameError").innerText = "Last name is required.";
+        document.getElementById("lnameError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("lnameError").style.display = "none";
+    }
+
+    // Email Validation
+    let email = document.getElementById("email").value;
+    let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+        document.getElementById("emailError").innerText = "Enter a valid email address.";
+        document.getElementById("emailError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("emailError").style.display = "none";
+    }
+
+    // Phone Number Validation (Only Numbers Allowed)
+    let phone = document.getElementById("phone").value;
+    let phonePattern = /^[0-9]{10}$/; // 10 digits only
+    if (!phonePattern.test(phone)) {
+        document.getElementById("phoneError").innerText = "Enter a valid 10-digit phone number.";
+        document.getElementById("phoneError").style.display = "block";
+        isValid = false;
+    } else {
+        document.getElementById("phoneError").style.display = "none";
+    }
+
+    // Prevent form submission if validation fails
+    if (!isValid) {
+        event.preventDefault();
+    }
+};
+
+        const phoneInput = document.querySelector("#phone");
+        intlTelInput(phoneInput, {
+            initialCountry: "in", // Default selected country
+            separateDialCode: true, // Shows separate country code
+            preferredCountries: ["in", "us", "gb"], // Optional - Preferred countries on top
+            utilsScript: "https://cdn.jsdelivr.net/npm/intl-tel-input@17.0.19/build/js/utils.js" // For number validation
+        });
+    </script>
 </body>
 </html>

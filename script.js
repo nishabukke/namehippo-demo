@@ -87,39 +87,63 @@ $('.menu ul .nav__submenu').click(function(e) {
 //   }
 // }
 
-  var heartClicked = false;
+var heartClicked = false;
 
-function fillHeart() {
-    var redHeart = document.getElementById('heart');
-    if (heartClicked == false) {
-      redHeart.classList.remove('fa-regular');
-      redHeart.classList.add('fa-solid');
-      redHeart.style.color = "#e90c0c";
-      redHeart.style.opacity = 1;
-      const title = document.title; // Assuming the page title contains the desired title
-      const description = "Your description goes here"; // Replace with your actual description
-  
-      // Create an object to hold the data
-      const data = {
-        title: title,
-        description: description,
-        // Add other relevant properties as needed
-      };
-  
-      // Store the data in local storage
-      localStorage.setItem('favoriteData', JSON.stringify(data));
-  
-  
-      redHeart.style.textShadow = "-1px 0 #fffbfb, 0 1px #fff, 1px 0 #fff, 0 -1px #fff";
-      heartClicked = true;
+function fillHeart(domainName, domainImage, domainPrice) {
+    var redHeart = event.target; // Get clicked heart icon
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+
+    if (!redHeart.classList.contains('fa-solid')) {
+        redHeart.classList.remove('fa-regular');
+        redHeart.classList.add('fa-solid');
+        redHeart.style.color = "#e90c0c";
+        redHeart.style.opacity = 1;
+
+        // Create object to store domain data
+        let domain = {
+            name: domainName,
+            image: domainImage,
+            price: domainPrice
+        };
+
+        favorites.push(domain);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
     } else {
-      redHeart.classList.remove('fa-solid');
-      redHeart.classList.add('fa-regular');
-      redHeart.style.color = "";
-      heartClicked = false;
-      localStorage.removeItem('favoriteData');
+        redHeart.classList.remove('fa-solid');
+        redHeart.classList.add('fa-regular');
+        redHeart.style.color = "";
+
+        favorites = favorites.filter(fav => fav.name !== domainName);
+        localStorage.setItem('favorites', JSON.stringify(favorites));
     }
+
+    displayFavorites();
 }
+
+function displayFavorites() {
+    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
+    let container = document.getElementById('favoriteContainer');
+    container.innerHTML = '';
+
+    favorites.forEach(domain => {
+        container.innerHTML += `
+            <div class="premium-domain-item">
+                <img src="images/premium-domain-img.jpg" alt="">
+                <div class="domain-content">
+                    <h4 class="m-0">${domain.name}</h4>
+                    <img src="${domain.image}" alt="">
+                    <div class="price">
+                        <span>${domain.price}</span>
+                        <a href="domain-detail.html" class="gradient-button">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+}
+
+document.addEventListener("DOMContentLoaded", displayFavorites);
+
 
 
 
