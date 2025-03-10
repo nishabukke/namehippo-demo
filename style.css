@@ -1061,7 +1061,7 @@ p{
         z-index: 2;
     }
 
-    .header-inner, .home-banner-image, .left-how-it-works, .bd.border_bg-3, .bd.border_bg-1 , .bd.border_bg-2, .right-content{
+    .header-inner, .home-banner-image, .left-how-it-works, .shape-1, .shape-2, .shape-3, .right-content{
         display: none;
     }
 
