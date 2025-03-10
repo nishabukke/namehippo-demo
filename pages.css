@@ -583,6 +583,11 @@ p{
     align-items: center;
 }
 
+.domain-points.faq .accordion-button:focus {
+    outline: 1px solid #4776e6; /* Change to your desired outline color */
+    /* box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); Optional glow effect */
+}
+
 .domain-points.faq .accordion-button:hover, .domain-points.faq .accordion-button:not(.collapsed){
     background-color: #f6f7fa;
     border-color: #4776e6;
@@ -1166,7 +1171,7 @@ p{
     right: 0;
     width: 90%;
     padding: 10px;
-    max-height: 200px;
+    max-height: 230px;
 }
 
 .right-all-names .domain-content img{
@@ -1198,7 +1203,7 @@ p{
 
 .page-link{
     color: #003;
-    background-color: #4bc9fe;
+    background-color: #c7c7c7;
     padding: 5px 15px;
     border: none;
 }
@@ -1213,7 +1218,7 @@ p{
     box-shadow: none;
 }
 
-.disabled>.page-link, .page-link.disabled{
+.disabled>.page-link{
     background-color: #c7c7c7;
 }
 
@@ -1456,9 +1461,15 @@ display: block;
 .mobile-menu-container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     background: linear-gradient(to left, #8e54e9, #4776e6);
     padding: 10px;
+}
+
+.right-mobile-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .mobile-menu-container .logo{
@@ -1648,8 +1659,12 @@ display: block;
         width: 150px;
     }
 
-    .home-banner-content, .footer-inner, .about-inner, .how-to-choose-inner, .why-choose-inner, .right-all-names, .by-industry-section, .right-by-industry-inner, .blog-inner, .contact-section{
+    .home-banner-content, .footer-inner, .about-inner, .how-to-choose-inner, .why-choose-inner, .right-all-names, .by-industry-section, .right-by-industry-inner, .blog-inner, .contact-section, .favorite-section, .favorite-section .premium-domain-inner, .register-section form .input-group{
         grid-template-columns: repeat(1,1fr);
+    }
+    
+    .favorite-section {
+        margin-top: 50px;
     }
 
     .about-section{
@@ -1670,7 +1685,7 @@ display: block;
     }
 
     .blog-header .home-banner-content, .home-banner-content {
-        padding: 80px 20px;
+        padding: 115px 20px;
         gap: 10px;
     }
 
@@ -1742,5 +1757,13 @@ display: block;
 
     .input-group label{
         font-size: 14px;
+    }
+
+    .login-inner, .register-inner {
+        width: 100%;
+    }
+
+    .login-section, .register-section{
+        margin-top: 90px;
     }
 }

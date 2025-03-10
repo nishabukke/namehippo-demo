@@ -3,16 +3,76 @@
 const searchIcon = document.getElementById("searchIcon");
 const popup = document.getElementById("popup");
 const closePopup = document.getElementById("closePopup");
+const focusableElements = popup.querySelectorAll("a, button, input, textarea, select");
+let lastFocusedElement = null;
 
-// Show popup
-searchIcon.addEventListener("click", () => {
+// Function to open popup and trap focus
+function openPopup() {
+  lastFocusedElement = document.activeElement; // Store last focused element
   popup.style.display = "flex";
+  document.body.setAttribute("tabindex", "-1");
+  document.body.setAttribute("aria-hidden", "true");
+
+  // Move focus to the first focusable element inside the popup
+  if (focusableElements.length > 0) {
+    focusableElements[0].focus();
+  }
+}
+
+// Function to close popup and restore focus
+function closePopupHandler() {
+  popup.style.display = "none";
+  document.body.removeAttribute("tabindex");
+  document.body.setAttribute("aria-hidden", "false");
+
+  // Restore focus to the previously focused element
+  if (lastFocusedElement) {
+    lastFocusedElement.focus();
+  }
+}
+
+// Handle search icon click
+searchIcon.addEventListener("click", openPopup);
+
+// Handle Enter keypress on search icon
+searchIcon.addEventListener("keypress", (event) => {
+  if (event.key === "Enter") {
+    openPopup();
+  }
 });
 
-// Close popup
-closePopup.addEventListener("click", () => {
-  popup.style.display = "none";
+// Handle close button click
+closePopup.addEventListener("click", closePopupHandler);
+
+// Handle Escape keypress to close popup
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    closePopupHandler();
+  }
 });
+
+// Trap focus inside popup
+popup.addEventListener("keydown", (event) => {
+  if (event.key === "Tab") {
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    if (event.shiftKey) {
+      // If Shift + Tab is pressed, focus should go to the last element
+      if (document.activeElement === firstElement) {
+        event.preventDefault();
+        lastElement.focus();
+      }
+    } else {
+      // If Tab is pressed, focus should go to the first element
+      if (document.activeElement === lastElement) {
+        event.preventDefault();
+        firstElement.focus();
+      }
+    }
+  }
+});
+
 
 // mobile menu
 
@@ -51,103 +111,6 @@ $('.menu ul .nav__submenu').click(function(e) {
 });
 
 
-
-
-// var heartClicked = false;
-
-// function fillHeart() {
-//   var redHeart = document.getElementById('heart');
-//   if (heartClicked == false) {
-//     redHeart.classList.remove('fa-regular');
-//     redHeart.classList.add('fa-solid');
-//     redHeart.style.color = "#e90c0c";
-//     redHeart.style.opacity = 1;
-//     const title = document.title; // Assuming the page title contains the desired title
-//     const description = "Your description goes here"; // Replace with your actual description
-
-//     // Create an object to hold the data
-//     const data = {
-//       title: title,
-//       description: description,
-//       // Add other relevant properties as needed
-//     };
-
-//     // Store the data in local storage
-//     localStorage.setItem('favoriteData', JSON.stringify(data));
-
-
-//     redHeart.style.textShadow = "-1px 0 #fffbfb, 0 1px #fff, 1px 0 #fff, 0 -1px #fff";
-//     heartClicked = true;
-//   } else {
-//     redHeart.classList.remove('fa-solid');
-//     redHeart.classList.add('fa-regular');
-//     redHeart.style.color = "";
-//     heartClicked = false;
-//     localStorage.removeItem('favoriteData');
-//   }
-// }
-
-var heartClicked = false;
-
-function fillHeart(domainName, domainImage, domainPrice) {
-    var redHeart = event.target; // Get clicked heart icon
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-
-    if (!redHeart.classList.contains('fa-solid')) {
-        redHeart.classList.remove('fa-regular');
-        redHeart.classList.add('fa-solid');
-        redHeart.style.color = "#e90c0c";
-        redHeart.style.opacity = 1;
-
-        // Create object to store domain data
-        let domain = {
-            name: domainName,
-            image: domainImage,
-            price: domainPrice
-        };
-
-        favorites.push(domain);
-        localStorage.setItem('favorites', JSON.stringify(favorites));
-    } else {
-        redHeart.classList.remove('fa-solid');
-        redHeart.classList.add('fa-regular');
-        redHeart.style.color = "";
-
-        favorites = favorites.filter(fav => fav.name !== domainName);
-        localStorage.setItem('favorites', JSON.stringify(favorites));
-    }
-
-    displayFavorites();
-}
-
-function displayFavorites() {
-    let favorites = JSON.parse(localStorage.getItem('favorites')) || [];
-    let container = document.getElementById('favoriteContainer');
-    container.innerHTML = '';
-
-    favorites.forEach(domain => {
-        container.innerHTML += `
-            <div class="premium-domain-item">
-                <img src="images/premium-domain-img.jpg" alt="">
-                <div class="domain-content">
-                    <h4 class="m-0">${domain.name}</h4>
-                    <img src="${domain.image}" alt="">
-                    <div class="price">
-                        <span>${domain.price}</span>
-                        <a href="domain-detail.html" class="gradient-button">Buy Now</a>
-                    </div>
-                </div>
-            </div>
-        `;
-    });
-}
-
-document.addEventListener("DOMContentLoaded", displayFavorites);
-
-
-
-
-
   // by industry page js 
 
   document.addEventListener("DOMContentLoaded", function () {
@@ -175,46 +138,65 @@ document.addEventListener("DOMContentLoaded", displayFavorites);
     });
 
     // Sort functionality
-    document.getElementById("sort").addEventListener("change", function () {
-        let sortBy = this.value;
-        let domainList = document.querySelector(".right-by-industry");
-        let items = Array.from(domainList.querySelectorAll(".premium-domain-item"));
+    // document.getElementById("sort").addEventListener("change", function () {
+    //     let sortBy = this.value;
+    //     let domainList = document.querySelector(".right-by-industry");
+    //     let items = Array.from(domainList.querySelectorAll(".premium-domain-item"));
 
-        items.sort((a, b) => {
-            let nameA = a.querySelector("h4").textContent.toLowerCase();
-            let nameB = b.querySelector("h4").textContent.toLowerCase();
-            let priceA = parseInt(a.querySelector(".price span").textContent.replace("$", ""));
-            let priceB = parseInt(b.querySelector(".price span").textContent.replace("$", ""));
+    //     items.sort((a, b) => {
+    //         let nameA = a.querySelector("h4").textContent.toLowerCase();
+    //         let nameB = b.querySelector("h4").textContent.toLowerCase();
+    //         let priceA = parseInt(a.querySelector(".price span").textContent.replace("$", ""));
+    //         let priceB = parseInt(b.querySelector(".price span").textContent.replace("$", ""));
 
-            if (sortBy === "name") return nameA.localeCompare(nameB);
-            if (sortBy === "price-low") return priceA - priceB;
-            if (sortBy === "price-high") return priceB - priceA;
-        });
+    //         if (sortBy === "name") return nameA.localeCompare(nameB);
+    //         if (sortBy === "price-low") return priceA - priceB;
+    //         if (sortBy === "price-high") return priceB - priceA;
+    //     });
 
-        items.forEach(item => domainList.appendChild(item));
-    });
+    //     items.forEach(item => domainList.appendChild(item));
+    // });
 });
 
 
 function activeTab(evt, id) {
-           
-  // Get all elements with class="tablinks" and remove the class "active"
-   let tabactive = document.getElementsByClassName("TabButtonSelected");
-   tabactive[0].className = tabactive[0].className.replace(" TabButtonSelected", "");
+  // Remove "TabButtonSelected" class from the currently selected tab
+  let currentActiveTab = document.querySelector(".TabButtonSelected");
+  if (currentActiveTab) {
+      currentActiveTab.classList.remove("TabButtonSelected");
+  }
 
-   document.getElementById(id).style.display = "block";
-   evt.currentTarget.className += " TabButtonSelected";
+  // Show the clicked tab's content
+  document.getElementById(id).style.display = "block";
+  evt.currentTarget.classList.add("TabButtonSelected");
 
-   displaySection(evt,id)
+  // Update the displayed section
+  displaySection(id);
 }
 
-function displaySection(evt, id) {
+function displaySection(id) {
+  // Hide all tab sections
+  document.querySelectorAll(".tab-section").forEach(section => {
+      section.classList.remove("d-chart-show");
+      section.classList.add("d-chart-n");
+      section.style.display = "none";
+  });
 
-   let tabactive = document.getElementsByClassName("tab-section");
-   tabactive[0].className = tabactive[0].className.replace(" d-chart-show", "d-chart-n");
-   // add below line of codes
-   [...document.querySelectorAll('div.tab-section')].forEach(item => item.style.display='none')
-   document.getElementById("Section" + id).style.display = "block";
-   evt.currentTarget.className += " d-chart-show";
-
+  // Show the selected tab section
+  let activeSection = document.getElementById("Section" + id);
+  if (activeSection) {
+      activeSection.style.display = "block";
+      activeSection.classList.add("d-chart-show");
+  }
 }
+
+// Add keyboard accessibility: Listen for Enter and Space key presses
+document.querySelectorAll(".TabButton").forEach(tab => {
+  tab.addEventListener("keydown", function (event) {
+      if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault(); // Prevent scrolling when Space is pressed
+          activeTab(event, this.id);
+      }
+  });
+});
+

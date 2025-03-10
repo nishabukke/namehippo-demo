@@ -888,9 +888,15 @@ p{
 .mobile-menu-container{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     background: linear-gradient(to left, #8e54e9, #4776e6);
     padding: 10px;
+}
+
+.right-mobile-menu{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .mobile-menu-container .logo{
