@@ -1659,12 +1659,41 @@ display: block;
         width: 150px;
     }
 
-    .home-banner-content, .footer-inner, .about-inner, .how-to-choose-inner, .why-choose-inner, .right-all-names, .by-industry-section, .right-by-industry-inner, .blog-inner, .contact-section, .favorite-section, .favorite-section .premium-domain-inner, .register-section form .input-group{
+    .home-banner-content, .footer-inner, .about-inner, .how-to-choose-inner, .why-choose-inner, .right-all-names, .by-industry-section, .right-by-industry-inner, .blog-inner, .contact-section, .favorite-section, .favorite-section .premium-domain-inner, .register-section form .input-group, .domain-page-section .domain-inner, .domain-points.cards, .help-section-inner, .domain-points .premium-domain-inner{
         grid-template-columns: repeat(1,1fr);
     }
     
     .favorite-section {
         margin-top: 50px;
+    }
+
+    .domain-section .domain-inner{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .left-domain-section, .right-domain-section {
+        width: 100% ;
+    }
+    
+    .buy-now{
+        flex-direction: column;
+    }
+
+    .help-section-inner{
+        padding: 0;
+    }
+
+    .domain-section{
+        margin-top: 120px;
+    }
+
+    .checkout-btn .gradient-button{
+        padding: 12px 10px;
+    }
+
+    .domain-img img{
+        height: 300px;
     }
 
     .about-section{
@@ -1766,4 +1795,4 @@ display: block;
     .login-section, .register-section{
         margin-top: 90px;
     }
-}
+}   
