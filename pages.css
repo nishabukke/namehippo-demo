@@ -1169,16 +1169,12 @@ p{
     margin: 0 auto;
     position: absolute;
     right: 0;
-    width: 90%;
+    width: 85%;
     padding: 10px;
-    max-height: 230px;
+    max-height: 250px;
 }
 
-.right-all-names .domain-content img{
-    border: 1px solid #c7c7c7;
-}
-
-.right-all-names .domain-content h4{
+.domain-content h4{
     font-size: 18px;
 }
 
