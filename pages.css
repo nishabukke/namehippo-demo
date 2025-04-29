@@ -1660,7 +1660,7 @@ display: block;
     }
     
     .favorite-section {
-        margin-top: 50px;
+        margin-top: 100px;
     }
 
     .domain-section .domain-inner{
@@ -1678,6 +1678,7 @@ display: block;
 
     .help-section-inner{
         padding: 0;
+        gap: 10px;
     }
 
     .domain-section{
@@ -1687,6 +1688,10 @@ display: block;
     .help-section{
         margin: 40px 0px;
         padding: 30px;
+    }
+
+    .help-section-item-cont{
+        margin-bottom: 25px;
     }
 
     .checkout-btn .gradient-button{
