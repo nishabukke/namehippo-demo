@@ -52,7 +52,7 @@ ul{
 
 .common-heading{
     color: #2e3d62;
-    font-size: 48px;
+    font-size: 1.8rem;
     text-transform: capitalize;
     text-align: center;
     font-weight: 600;
@@ -64,7 +64,7 @@ ul{
 }
 
 p{
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.5;
 }
 
@@ -91,7 +91,7 @@ p{
 
 .left-upper-header .social-icons span, .search-favt span{
     color: #fff;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0px 10px;
     cursor: pointer;
 }
@@ -220,7 +220,7 @@ p{
 
 .home-banner-heading h1{
     font-weight: 700;
-    font-size: 56px;
+    font-size: 3.625rem;
 }
 
 .home-banner-heading h1 span{
@@ -270,7 +270,7 @@ p{
       .close-btn {
         background: none;
         border: none;
-        font-size: 24px;
+        font-size: 1.5rem;
         cursor: pointer;
         color: #333;
         float: right;
@@ -695,7 +695,7 @@ p{
 }
 
 .blog-date p{
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .blog-info .content-p{
@@ -832,7 +832,7 @@ p{
 
 .footer-item li{
     padding: 5px 0px;
-    font-size: 18px;
+    font-size: 1.125rem;
     list-style-type: none;
 }
 
@@ -852,7 +852,7 @@ p{
 }
 
 .footer-item .social-icons span{
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #23126a;
 }
 
@@ -952,7 +952,7 @@ p{
     /* border-radius: 5px; */
     color: #fff;
     border: 0;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: bold;
     outline: none;
     z-index: 1111;
@@ -974,11 +974,11 @@ p{
   outline:none;
   z-index:22222;
 }
-.menu{z-index:1111; font-weight:bold; font-size:14px; width:100%; background-color: #fff;  position:absolute; text-align:center; top: 0; left: 0;min-height: 100%;}
+.menu{z-index:1111; font-weight:bold; font-size:0.875rem; width:100%; background-color: #fff;  position:absolute; text-align:center; top: 0; left: 0;min-height: 100%;}
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none; padding-top: 80px;}
 .menu li {display: block;   padding:20px 0 20px 0;}
 .menu li:hover{display: block;    background-color: #fff;}
-.menu ul li a { text-decoration:none;  margin: 0px; color:#2e3d62;font-size: 14px;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#2e3d62;font-size: 0.875rem;}
 .menu ul li a:hover {  color: #2e3d62; text-decoration:none;}
 .menu a{text-decoration:none; color:#2e3d62;}
 
@@ -987,7 +987,7 @@ p{
 }
 
 .fa-chevron-right{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .glyphicon-home{
@@ -1051,118 +1051,29 @@ p{
 }
 
 @media screen and (max-width:450px) {
-    .mobile-header{
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 2;
-    }
-
     .header-inner, .home-banner-image, .left-how-it-works, .shape-1, .shape-2, .shape-3, .right-content{
         display: none;
     }
 
-    p{
-        font-size: 14px;
-    }
-
-    .common-heading {
-        font-size: 30px;
-    }
-
-    .section_lg{
-        padding: 50px 20px;
-    }
-    
-    #header{
-        height: 600px;
-        background-size: cover;
-    }
-
     .mobile-header .logo img{
-        width: 150px;
+        width: 150px !important;
     }
 
     .home-banner-content, .key-points-inner, .index-content-section .container, .premium-domain-inner, .why-choose-inner, .how-it-works-inner, .right-how-it-works, .blog-inner, .footer-inner{
-        grid-template-columns: repeat(1,1fr);
-    }
-
-    .footer-inner{
-        gap: 30px;
-    }
-
-    .footer-item li{
-        font-size: 14px;
+        grid-template-columns: repeat(1,1fr) !important;
     }
 
     .home-banner-content{
-        padding: 80px 30px 60px 30px;
-    }
-
-    .home-banner-heading h1 {
-        font-weight: 700;
-        font-size: 32px;
-    }  
-    
-    .home-banner-heading{
-        gap: 15px;
-    }
-
-    .right-hiw-item img {
-        width: 100px;
+        padding: 80px 30px 60px 30px !important;
     }
 
     .blog-item img{
         height: 170px;
     }
 
-    .blog-info {
-        gap: 15px;
-        padding: 15px;
-    }
-
-    .blog-info p, .blog-date p {
-        font-size: 14px;
-    }
-
-    .search-container .search-form {
-        position: relative;
-        display: flex;
-        width: auto;
-        flex-direction: row;
-        padding: 20px;
-        gap: 15px;
-        align-items: center;
-        justify-content: center;
-        border-radius: 10px;
-        background: #fff;
-        box-shadow: 0 5px 20px 0 rgba(24, 13, 91, .15);
-    }
-
-    .search-form input[type='text'] {
-        width: 100%;
-        padding: 10px;
-        background: transparent;
-        border: 1px solid #c7c7c7;
-        border-radius: 10px;
-    }
-
-    .search-form span.bar, .search-form select{
-        display: none;
-    }
-
     .keywords{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        width: max-content;
-        margin: 40px auto 0px auto;
-        text-align: center;
-    }
-
-    .index-content-section .container{
-        padding: 20px;
+        grid-template-columns: repeat(2,1fr) !important;
     }
 
     .index-content-section .container{
@@ -1185,11 +1096,11 @@ p{
     }
 
     p{
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .common-heading {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
 
     .section_lg{
@@ -1222,7 +1133,7 @@ p{
     }
 
     .footer-item li{
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .home-banner-content{
@@ -1231,7 +1142,7 @@ p{
 
     .home-banner-heading h1 {
         font-weight: 700;
-        font-size: 32px;
+        font-size: 2rem;
     }  
     
     .home-banner-heading{
@@ -1248,7 +1159,7 @@ p{
     }
 
     .blog-info p, .blog-date p {
-        font-size: 14px;
+        font-size: 0.875rem;
     }
 
     .search-container .search-form {

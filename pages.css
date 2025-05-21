@@ -56,7 +56,7 @@ ul li{
 
 .common-heading{
     color: #2e3d62;
-    font-size: 48px;
+    font-size: 3rem;
     text-transform: capitalize;
     text-align: center;
     font-weight: 600;
@@ -67,7 +67,7 @@ ul li{
 }
 
 p{
-    font-size: 18px;
+    font-size: 1.125rem;
     line-height: 1.5;
 }
 
@@ -122,7 +122,7 @@ p{
 
 .left-upper-header .social-icons span, .search-favt span{
     color: #fff;
-    font-size: 18px;
+    font-size: 1.125rem;
     margin: 0px 10px;
     cursor: pointer;
 }
@@ -234,20 +234,17 @@ p{
 }
 
 .home-banner-content p{
-    font-size: 22px;
+    font-size: 1.375rem;
 }
 
 .home-banner-content h1{
-    font-size: 58px;
+    font-size: 3.625rem;
     font-weight: 700;
 }
 
 /* header css end */
 
 /* search popup css start */
-
-
-    /* Popup Styles */
     .popup-overlay {
         display: none;
         position: fixed;
@@ -279,7 +276,7 @@ p{
       .close-btn {
         background: none;
         border: none;
-        font-size: 24px;
+        font-size: 1.5rem;
         cursor: pointer;
         color: #333;
         float: right;
@@ -366,7 +363,7 @@ p{
 }
 
 .domain-name p{
-    font-size: 17px;
+    font-size: 1.125rem;
 }
 
 .buy-now{
@@ -434,7 +431,7 @@ p{
     position: absolute;
     top: 2%;
     right: 2%;
-    font-size: 24px;
+    font-size: 1.5rem;
     cursor: pointer;
 }
 
@@ -458,11 +455,11 @@ p{
 }
 
 .domain-desc.domain-page h1{
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 
 .domain-desc.domain-page h1 span{
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .domain-points-heading{
@@ -530,7 +527,7 @@ p{
   }
 
   .flip-card-back p{
-    font-size: 16px;
+    font-size: 1rem;
   }
 
 .domain-points-heading img{
@@ -538,13 +535,13 @@ p{
 }
 
 .domain-key-points P{
-    font-size: 17px;
+    font-size: 1.12rem;
 }
 
 .domain-key-points li{
     padding: 5px 0px;
     list-style-type: none;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .domain-key-points.keyword a{
@@ -577,7 +574,7 @@ p{
     border: 1px solid #f6f7fa;
     border-radius: 10px;
     font-weight: 600;
-    font-size: 22px;
+    font-size: 1.375rem;
     padding: 35px;
     gap: 25px;
     align-items: center;
@@ -599,7 +596,7 @@ p{
 }
 
 .domain-points.faq .accordion-body p{
-    font-size: 17px;
+    font-size: 1.12rem;
 }
 
 .domain-points.faq .accordion-body ul{
@@ -617,7 +614,7 @@ p{
     content: "+";
     display: flex;
         align-items: center;
-        font-size: 26px;
+        font-size: 1.625rem;
         background: #4776e6;
         color: #fff;
         justify-content: center;
@@ -750,7 +747,7 @@ p{
     color: #fff;
     border-radius: 0 0 10px 10px;
     line-height: 28px;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: 700;
     z-index: 1;
     padding-top: 14px;
@@ -768,7 +765,7 @@ p{
 }
 
 .help-section-item i{
-    font-size: 22px;
+    font-size: 1.625rem;
 }
 
 /* help section css end */
@@ -888,7 +885,7 @@ p{
 }
 
 .how-to-choose-item p{
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 /* why choose us section css start */
@@ -959,7 +956,7 @@ p{
 }
 
 .blog-info p, .blog-date p{
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 .blog-info .content-p{
@@ -1089,7 +1086,7 @@ p{
 
 .footer-item li{
     padding: 5px 0px;
-    font-size: 18px;
+    font-size: 1.125rem;
     list-style-type: none;
 }
 
@@ -1109,7 +1106,7 @@ p{
 }
 
 .footer-item .social-icons span{
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #23126a;
 }
 
@@ -1175,7 +1172,7 @@ p{
 }
 
 .domain-content h4{
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 
 .right-all-names .domain-content .price{
@@ -1408,11 +1405,11 @@ display: block;
 }
 
 .login-section .input-group span{
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .register-section .input-group input::placeholder, .register-section textarea::placeholder{
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 .register-section form{
@@ -1440,7 +1437,7 @@ display: block;
 
 .error {
     color: red;
-    font-size: 14px;
+    font-size: 0.875rem;
     display: none; /* Hide error messages initially */
 }
 
@@ -1521,7 +1518,7 @@ display: block;
     /* border-radius: 5px; */
     color: #fff;
     border: 0;
-    font-size: 30px;
+    font-size: 1.875rem;
     font-weight: bold;
     outline: none;
     z-index: 1111;
@@ -1543,11 +1540,11 @@ display: block;
   outline:none;
   z-index:22222;
 }
-.menu{z-index:1111; font-weight:bold; font-size:14px; width:100%; background-color: #fff;  position:absolute; text-align:center; top: 0; left: 0;min-height: 100%;}
+.menu{z-index:1111; font-weight:bold; font-size:0.875rem; width:100%; background-color: #fff;  position:absolute; text-align:center; top: 0; left: 0;min-height: 100%;}
 .menu ul {margin: 0; padding: 0; list-style-type: none; list-style-image: none; padding-top: 80px;}
 .menu li {display: block;   padding:20px 0 20px 0;}
 .menu li:hover{display: block;    background-color: #fff;}
-.menu ul li a { text-decoration:none;  margin: 0px; color:#2e3d62;font-size: 14px;}
+.menu ul li a { text-decoration:none;  margin: 0px; color:#2e3d62;font-size: 0.875rem;}
 .menu ul li a:hover {  color: #2e3d62; text-decoration:none;}
 .menu a{text-decoration:none; color:#2e3d62;}
 
@@ -1556,7 +1553,7 @@ display: block;
 }
 
 .fa-chevron-right{
-    font-size: 12px;
+    font-size: 0.75rem;
 }
 
 .glyphicon-home{
@@ -1621,185 +1618,24 @@ display: block;
 
 
 @media screen and (max-width:450px) {
-    .mobile-header{
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        z-index: 2;
-    }
-
     .header-inner, .home-banner-image, .left-how-it-works, .bd.border_bg-3, .bd.border_bg-1 , .bd.border_bg-2, .right-content{
         display: none;
     }
 
-    p{
-        font-size: 14px;
-    }
-
-    .common-heading {
-        font-size: 30px;
-    }
-    
-    #header{
-        height: 243px;
-        background-size: cover;
-    }
-
-    .section_lg{
-        padding: 50px 20px;
-    }
-
     .mobile-header .logo img{
-        width: 150px;
+        width: 150px !important;
     }
 
     .home-banner-content, .footer-inner, .about-inner, .how-to-choose-inner, .why-choose-inner, .right-all-names, .by-industry-section, .right-by-industry-inner, .blog-inner, .contact-section, .favorite-section, .favorite-section .premium-domain-inner, .register-section form .input-group, .domain-page-section .domain-inner, .domain-points.cards, .help-section-inner, .domain-points .premium-domain-inner{
-        grid-template-columns: repeat(1,1fr);
-    }
-    
-    .favorite-section {
-        margin-top: 100px;
-    }
-
-    .domain-section .domain-inner{
-        flex-direction: column-reverse;
-        gap: 30px;
-    }
-
-    .left-domain-section, .right-domain-section {
-        width: 100% ;
-    }
-    
-    .buy-now{
-        flex-direction: column;
-    }
-
-    .help-section-inner{
-        padding: 0;
-        gap: 10px;
-    }
-
-    .domain-section{
-        margin-top: 120px;
-    }
-
-    .help-section{
-        margin: 40px 0px;
-        padding: 30px;
-    }
-
-    .help-section-item-cont{
-        margin-bottom: 25px;
-    }
-
-    .checkout-btn .gradient-button{
-        padding: 12px 10px;
-    }
-
-    .domain-img img{
-        height: 300px;
+        grid-template-columns: repeat(1,1fr) !important;
     }
 
     .about-section{
-        padding-top: 0;
-    }
-
-    .why-choose-item {
-        padding: 20px;
-    }
-
-    .why-choose-item img{
-        width: 70px;
-    }
-
-    .blog-header{
-        height: 245px !important;
-        background-size: cover !important;
+        padding-top: 0 !important;
     }
 
     .blog-header .home-banner-content, .home-banner-content {
-        padding: 115px 20px;
-        gap: 10px;
-    }
-
-    .home-banner-content p {
-        font-size: 14px;
-    }
-
-    .domain-points.faq .accordion-button {
-        color: #2e3d62;
-        border: 1px solid #f6f7fa;
-        border-radius: 10px;
-        font-weight: 600;
-        font-size: 16px;
-        padding: 20px;
-        gap: 20px;
-        align-items: center;
-    }
-
-    .domain-points.faq .accordion {
-        width: 100%;
-    }
-
-    .right-about{
-        display: none;
-    }
-
-    .footer-inner{
-        gap: 30px;
-    }
-
-    .footer-item li{
-        font-size: 14px;
-    }
-
-    .home-banner-content h1 {
-        font-size: 32px;
-        font-weight: 700;
-    }
-    
-    .home-banner-heading{
-        gap: 15px;
-    }
-
-    .sort-by select {
-        margin-left: 0px;
-        width: 100%;
-    }
-
-    .blog-info p, .blog-date p {
-        font-size: 14px;
-    }
-
-    .blog-info {
-        gap: 15px;
-        padding: 15px;
-    }
-
-    .blog-section1{
-        display: none;
-    }
-
-    .left-contact{
-        gap: 15px;
-    }
-
-    .contact-form .input-group input, .contact-form .input-group textarea {
-        padding: 5px;
-    }
-
-    .input-group label{
-        font-size: 14px;
-    }
-
-    .login-inner, .register-inner {
-        width: 100%;
-    }
-
-    .login-section, .register-section{
-        margin-top: 90px;
+        padding: 115px 20px !important;
     }
 }   
 
@@ -1823,7 +1659,7 @@ display: block;
     }
 
     .common-heading {
-        font-size: 30px;
+        font-size: 1.875rem;
     }
     
     #header{

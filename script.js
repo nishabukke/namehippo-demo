@@ -129,13 +129,16 @@ $('.menu ul .nav__submenu').click(function(e) {
     });
 
     // Search functionality
-    document.getElementById("search").addEventListener("input", function () {
+    document.addEventListener("DOMContentLoaded", function () {
+        document.getElementById("search").addEventListener("input", function () {
         let filter = this.value.toLowerCase();
         document.querySelectorAll(".premium-domain-item").forEach(item => {
             let domainName = item.querySelector("h4").textContent.toLowerCase();
             item.style.display = domainName.includes(filter) ? "block" : "none";
         });
     });
+    });
+    
 
     // Sort functionality
     // document.getElementById("sort").addEventListener("change", function () {
