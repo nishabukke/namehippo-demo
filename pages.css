@@ -1802,3 +1802,191 @@ display: block;
         margin-top: 90px;
     }
 }   
+
+
+@media screen and (max-width:768px) {
+    .mobile-header{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    .header-inner, .home-banner-image, .left-how-it-works, .bd.border_bg-3, .bd.border_bg-1 , .bd.border_bg-2, .right-content{
+        display: none;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .common-heading {
+        font-size: 30px;
+    }
+    
+    #header{
+        height: 350px;
+        background-size: cover;
+    }
+
+    .section_lg{
+        padding: 50px 20px;
+    }
+
+    .mobile-header .logo img{
+        width: 250px;
+    }
+
+    .home-banner-content, .footer-inner, .about-inner, .how-to-choose-inner, .why-choose-inner, .by-industry-section, .blog-inner, .contact-section, .favorite-section, .favorite-section .premium-domain-inner, .register-section form .input-group, .domain-page-section .domain-inner, .domain-points.cards, .help-section-inner, .domain-points .premium-domain-inner{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+     .right-all-names, .right-by-industry-inner{
+        grid-template-columns: repeat(3,1fr);
+     }
+    
+    .favorite-section {
+        margin-top: 100px;
+    }
+
+    .domain-section .domain-inner{
+        flex-direction: column-reverse;
+        gap: 30px;
+    }
+
+    .left-domain-section, .right-domain-section {
+        width: 100% ;
+    }
+    
+    .buy-now{
+        flex-direction: column;
+    }
+
+    .help-section-inner{
+        padding: 0;
+        gap: 10px;
+    }
+
+    .domain-section{
+        margin-top: 120px;
+    }
+
+    .help-section{
+        margin: 40px 0px;
+        padding: 30px;
+    }
+
+    .help-section-item-cont{
+        margin-bottom: 25px;
+    }
+
+    .checkout-btn .gradient-button{
+        padding: 12px 10px;
+    }
+
+    .domain-img img{
+        height: 300px;
+    }
+
+    .why-choose-item {
+        padding: 20px;
+    }
+
+    .why-choose-item img{
+        width: 70px;
+    }
+
+    .blog-header{
+        height: 245px !important;
+        background-size: cover !important;
+    }
+
+    .blog-header .home-banner-content, .home-banner-content {
+        padding: 125px 20px;
+        gap: 10px;
+    }
+
+    .home-banner-content p {
+        font-size: 14px;
+    }
+
+    .domain-points.faq .accordion-button {
+        color: #2e3d62;
+        border: 1px solid #f6f7fa;
+        border-radius: 10px;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 20px;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .domain-points.faq .accordion {
+        width: 100%;
+    }
+
+    .right-about{
+        display: none;
+    }
+
+    .footer-inner{
+        gap: 30px;
+    }
+
+    .footer-item li{
+        font-size: 14px;
+    }
+
+    .home-banner-content h1 {
+        font-size: 32px;
+        font-weight: 700;
+    }
+    
+    .home-banner-heading{
+        gap: 15px;
+    }
+
+    .sort-by select {
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    .blog-info p, .blog-date p {
+        font-size: 14px;
+    }
+
+    .blog-info {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .blog-section1{
+        display: none;
+    }
+
+    .left-contact{
+        gap: 15px;
+    }
+
+    .contact-form .input-group input, .contact-form .input-group textarea {
+        padding: 5px;
+    }
+
+    .input-group label{
+        font-size: 14px;
+    }
+
+    .login-inner, .register-inner {
+        width: 100%;
+    }
+
+    .login-section, .register-section{
+        margin-top: 90px;
+    }
+
+    .footer-item img {
+        width: 250px;
+    }
+}   

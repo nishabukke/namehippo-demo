@@ -1050,7 +1050,6 @@ p{
   display: none;
 }
 
-
 @media screen and (max-width:450px) {
     .mobile-header{
         display: block;
@@ -1168,5 +1167,129 @@ p{
 
     .index-content-section .container{
         background-position: unset;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .mobile-header{
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 2;
+    }
+
+    .header-inner, .left-how-it-works, .shape-1, .shape-2, .shape-3, .right-content{
+        display: none;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .common-heading {
+        font-size: 30px;
+    }
+
+    .section_lg{
+        padding: 50px 20px;
+    }
+    
+    #header{
+        height: 600px;
+        background-size: cover;
+    }
+
+    .mobile-header .logo img{
+        width: 250px;
+    }
+
+    .mobile-menu-container{
+        padding: 10px 30px;
+    }
+
+    .key-points-inner, .why-choose-inner, .how-it-works-inner, .right-how-it-works, .blog-inner, .footer-inner{
+        grid-template-columns: repeat(1,1fr);
+    }
+
+     .premium-domain-inner{
+        grid-template-columns: repeat(3,1fr);
+     }
+
+    .footer-inner{
+        gap: 30px;
+    }
+
+    .footer-item li{
+        font-size: 14px;
+    }
+
+    .home-banner-content{
+        padding: 150px 0px 30px 0px;
+    }
+
+    .home-banner-heading h1 {
+        font-weight: 700;
+        font-size: 32px;
+    }  
+    
+    .home-banner-heading{
+        gap: 15px;
+    }
+
+    .right-hiw-item img {
+        width: 100px;
+    }
+
+    .blog-info {
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .blog-info p, .blog-date p {
+        font-size: 14px;
+    }
+
+    .search-container .search-form {
+        position: relative;
+        display: flex;
+        width: auto;
+        flex-direction: row;
+        padding: 20px;
+        gap: 15px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 5px 20px 0 rgba(24, 13, 91, .15);
+    }
+
+    .search-form input[type='text'] {
+        width: 100%;
+        padding: 10px;
+        background: transparent;
+        border: 1px solid #c7c7c7;
+        border-radius: 10px;
+    }
+
+    .search-form span.bar, .search-form select{
+        display: none;
+    }
+
+    .keywords{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        width: max-content;
+        margin: 40px auto 0px auto;
+        text-align: center;
+    }
+
+    .index-content-section .container{
+        padding: 20px;
+    }
+
+    .footer-item img {
+        width: 250px;
     }
 }
