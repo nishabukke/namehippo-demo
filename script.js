@@ -141,24 +141,26 @@ $('.menu ul .nav__submenu').click(function(e) {
     
 
     // Sort functionality
-    // document.getElementById("sort").addEventListener("change", function () {
-    //     let sortBy = this.value;
-    //     let domainList = document.querySelector(".right-by-industry");
-    //     let items = Array.from(domainList.querySelectorAll(".premium-domain-item"));
+    document.addEventListener("DOMContentLoaded", function(){
+       document.getElementById("sort").addEventListener("change", function () {
+        let sortBy = this.value;
+        let domainList = document.querySelector(".right-by-industry");
+        let items = Array.from(domainList.querySelectorAll(".premium-domain-item"));
 
-    //     items.sort((a, b) => {
-    //         let nameA = a.querySelector("h4").textContent.toLowerCase();
-    //         let nameB = b.querySelector("h4").textContent.toLowerCase();
-    //         let priceA = parseInt(a.querySelector(".price span").textContent.replace("$", ""));
-    //         let priceB = parseInt(b.querySelector(".price span").textContent.replace("$", ""));
+        items.sort((a, b) => {
+            let nameA = a.querySelector("h4").textContent.toLowerCase();
+            let nameB = b.querySelector("h4").textContent.toLowerCase();
+            let priceA = parseInt(a.querySelector(".price span").textContent.replace("$", ""));
+            let priceB = parseInt(b.querySelector(".price span").textContent.replace("$", ""));
 
-    //         if (sortBy === "name") return nameA.localeCompare(nameB);
-    //         if (sortBy === "price-low") return priceA - priceB;
-    //         if (sortBy === "price-high") return priceB - priceA;
-    //     });
+            if (sortBy === "name") return nameA.localeCompare(nameB);
+            if (sortBy === "price-low") return priceA - priceB;
+            if (sortBy === "price-high") return priceB - priceA;
+        });
 
-    //     items.forEach(item => domainList.appendChild(item));
-    // });
+        items.forEach(item => domainList.appendChild(item));
+    });
+    });
 });
 
 

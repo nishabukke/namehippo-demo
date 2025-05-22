@@ -824,8 +824,8 @@ p{
     transform: translateY(-50%, -40%);
     background-color: #c7c7c7;
 }
-
 .search-form select {
+
     width: 120px;
     color: #5d5c64;
     border: none;
