@@ -30,7 +30,7 @@ ul{
     color: #fff;
     border: none;
     background: -webkit-linear-gradient(348deg, #f30070 0%, #eb7e0a 100%);
-    background: linear-gradient(102deg, #f30070 0%, #eb7e0a 100%);
+    background: #221269;
     padding: 12px 50px;
     border-radius: 50px;
     display: flex;
@@ -231,7 +231,7 @@ p{
 .home-banner-content{
     display: grid;
     grid-template-columns: 6.5fr 5.5fr;
-    padding: 60px 0px;
+    padding: 45px 0px;
     position: relative;
     z-index: 2;
 }
@@ -253,7 +253,7 @@ p{
 }
 
 .home-banner-image img{
-    width: 70%;
+    width: 85%;
     margin: 0px auto;
     display: flex;
 }

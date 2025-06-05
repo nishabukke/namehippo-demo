@@ -303,6 +303,7 @@ p{
     flex-direction: row-reverse;
     gap: 50px;
     position: relative;
+    margin-top: 50px;
 }
 
 .domain-page-section .domain-inner{
