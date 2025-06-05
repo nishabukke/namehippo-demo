@@ -34,8 +34,9 @@ ul li{
     color: #fff;
     border: none;
     background: -webkit-linear-gradient(348deg, #f30070 0%, #eb7e0a 100%);
-    background: linear-gradient(102deg, #f30070 0%, #eb7e0a 100%);
+    background: #22005a;
     padding: 12px 50px;
+    border: 1px solid #22005a;
     border-radius: 50px;
     display: flex;
     width: max-content;    
@@ -45,18 +46,19 @@ ul li{
 
 .gradient-button:hover{
     box-shadow: 0 10px 10px 0 rgba(28, 75, 154, .1);
-    background: linear-gradient(348deg, #f30070 0%, #eb7e0a 100%);
+    background: #fff;
+    border: 1px solid #22005a;
     transition: all .24s cubic-bezier(.55, .055, .675, .19);
-    color: #fff;    
+    color: #22005a;    
 }
 
 .gradient-button:hover a{
-    color: #fff;    
+    color: #22005a;    
 }
 
 .common-heading{
     color: #2e3d62;
-    font-size: 3rem;
+    font-size: 2.4rem;
     text-transform: capitalize;
     text-align: center;
     font-weight: 600;
@@ -945,7 +947,6 @@ p{
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     border-bottom: 1px solid #c7c7c7;
-    height: 250px;
 }
 
 .blog-info{
@@ -1010,10 +1011,13 @@ p{
 }
 
 .blog-detail-section img{
-    width: 100%;
+        width: 450px;
     height: 450px;
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.45) 10px 10px 15px, rgba(0, 0, 0, 0.3) 10px 15px 20px;
+    margin: 0px auto;
+    display: flex
+;
 }
 
 /* blog detail page css end */
