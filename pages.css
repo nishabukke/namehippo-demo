@@ -1680,7 +1680,12 @@ display: block;
         width: 150px !important;
     }
 
-    .home-banner-content, .footer-inner, .about-inner, .how-to-choose-inner, .why-choose-inner, .right-all-names, .by-industry-section, .right-by-industry-inner, .blog-inner, .contact-section, .favorite-section, .favorite-section .premium-domain-inner, .register-section form .input-group, .domain-page-section .domain-inner, .domain-points.cards, .help-section-inner, .domain-points .premium-domain-inner{
+    .blog-item {
+    flex-direction: column;
+    gap: 0px;
+    }
+
+    .home-banner-content, .footer-inner, .about-inner, .how-to-choose-inner, .why-choose-inner, .right-all-names, .by-industry-section, .right-by-industry-inner, .blog-inner, .contact-section, .favorite-section, .favorite-section .premium-domain-inner, .register-section form .input-group, .domain-page-section .domain-inner, .domain-points.cards, .help-section-inner, .domain-points .premium-domain-inner, .blog-section{
         grid-template-columns: repeat(1,1fr) !important;
     }
 
